@@ -3,7 +3,12 @@ on: [push]
 
 env:
   GITHUB_TOKEN: ${{ github.token }}
-  
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build-frontend:
     runs-on: ubuntu-latest
