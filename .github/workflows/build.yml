@@ -1,5 +1,9 @@
 name: build
 on: [push]
+
+env:
+  GITHUB_TOKEN: ${{ github.token }}
+  
 jobs:
   build-frontend:
     runs-on: ubuntu-latest
