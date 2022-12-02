@@ -11,8 +11,8 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: build
-        run: cd ${{ github.workspace }} && yarn install && yarn build
+        run: cd ${{ github.workspace }}/frontend && yarn install && yarn build
       - uses: actions/upload-artifact@v3
         with:
           name: clore-frontend
-          path: ${{ github.workspace }}/dist
+          path: ${{ github.workspace }}/frontend/dist
