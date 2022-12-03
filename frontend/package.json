@@ -24,7 +24,7 @@
   },
   "scripts": {
     "dev": "webpack serve --mode=development",
-    "build": "webpack --mode=production --json=dist/build_stats.json"
+    "build": "webpack --mode=production --json=build_stats.json"
   },
   "dependencies": {
     "codejar": "^3.6.0",

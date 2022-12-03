@@ -6,8 +6,10 @@ import Editor from "./components/Editor";
 
 function App() {
   return (
-    <div>
-      <Markdown text="_clore_ is also french for _close_" />
+    <div class="app-container">
+      <div class="story-panel">
+        <Markdown text="# Welcome to clore \n Besides being an awesome exercise platform, _clore_ is also french for _close_" />
+      </div>
       <Editor />
     </div>
   );

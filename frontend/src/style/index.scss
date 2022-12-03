@@ -1,9 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  display: grid;
-  place-items: center;
+
+  font-family: sans-serif;
+}
+
+.app-container {
   width: 100vw;
   min-height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+
+  background-color: #222;
+  color: #eee;
+}
+
+.editor {
+  flex: 2 1 200px;
+
+  background-color: #333;
+  color: #fff;
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  box-shadow: 3px 3px 6px #0002;
+
+  pre,
+  code {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+code {
+  .keyword {
+    color: #aff;
+  }
+  .function {
+    color: #f86;
+  }
+  .string {
+    color: #ff8;
+  }
+  .number {
+    color: #ff8;
+  }
+  .punctuation {
+    color: #c8f;
+  }
+}
+
+.story-panel {
+  padding: 1em;
+
+  flex: 1 1 200px;
 }
