@@ -25,6 +25,10 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ${{ github.workspace }}/frontend/dist
+      - name: Upload build stats
+        uses: actions/upload--artifact@v3
+        with:
+          path: ${{ github.workspace }}/frontend/build_stats.json
           
   deploy-to-gh-pages:
     needs: build-frontend
