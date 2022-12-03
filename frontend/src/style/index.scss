@@ -9,12 +9,22 @@ body {
   font-family: sans-serif;
 }
 
+@mixin mobile {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
 .app-container {
   width: 100vw;
   min-height: 100vh;
 
   display: flex;
   flex-direction: row;
+
+  @include mobile {
+    flex-direction: column;
+  }
 
   background-color: #222;
   color: #eee;
@@ -28,7 +38,7 @@ body {
   margin: 1em;
   padding: 0.5em;
   border-radius: 0.5em;
-  box-shadow: 3px 3px 6px #0002;
+  box-shadow: 0 0 12px #0004;
 
   pre,
   code {
