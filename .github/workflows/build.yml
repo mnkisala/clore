@@ -24,12 +24,13 @@ jobs:
       - name: Upload gh pages
         uses: actions/upload-pages-artifact@v1
         with:
+          name: build_stats.json
           path: ${{ github.workspace }}/frontend/dist
       - name: Upload build stats
         uses: actions/upload-artifact@v3
         with:
           path: ${{ github.workspace }}/frontend/build_stats.json
-          
+
   deploy-to-gh-pages:
     needs: build-frontend
     runs-on: ubuntu-latest
