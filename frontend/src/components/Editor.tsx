@@ -3,12 +3,18 @@ import { onMount } from "solid-js";
 import { CodeJar } from "codejar";
 import Prism from "prismjs";
 
-export default function Editor() {
+export interface EditorProps {
+  setText?: (string) => void;
+}
+
+export default function Editor(props: EditorProps) {
   let editor;
   onMount(() => {
     const jar = CodeJar(
       editor,
       (el) => {
+        props.setText && props.setText(el.textContent);
+
         el.innerHTML = Prism.highlight(
           el.textContent,
           Prism.languages.javascript,
@@ -18,7 +24,7 @@ export default function Editor() {
       { tab: "  " }
     );
     jar.updateCode(
-      "export function hello() {\n  let x = 5;\n  return `you can edit me ${x}`;\n}\n"
+      "def greet(name):\n\treturn f'hello {name}'\n\nprint(greet('world'))"
     );
   });
 

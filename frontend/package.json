@@ -27,6 +27,7 @@
     "build": "webpack --mode=production --json=build_stats.json"
   },
   "dependencies": {
+    "buffer": "^6.0.3",
     "codejar": "^3.6.0",
     "insane": "^2.6.2",
     "marked": "^4.2.3",
